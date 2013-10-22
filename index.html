@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8" />
+		<title>Dungeon Treasure Hunt</title>
+		<link href='http://fonts.googleapis.com/css?family=Orbitron:400,900|Press+Start+2P' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="js/modernizr.js"></script>
+		<script src="js/loader.js"></script>
+	</head>
+	<body>
+		<div id="game">
+			<div class="background"></div>
+			<div class="screen" id="splash-screen">
+				<h1 class="logo"><span>Dungeon</span> Treasure Hunt</h1>
+				<div class="progress">
+					<div class="indicator"></div>
+				</div>
+				<span class="continue">Click to continue</span>
+			</div>
+			<div class="screen" id="main-menu">
+				<h1 class="logo"><span>Dungeon</span> Treasure Hunt</h1>
+				<ul class="menu">
+					<li><button name="game-screen">Play</button></li>
+					<!--<li><button name="settings">Settings</button></li>-->
+					<li><button name="about">About</button></li>
+				</ul>
+			</div>
+			<div class="screen" id="game-screen">
+				<div class="game-board grid-size"></div>
+				<div class="score">Score: <span class="num">0</span></div>
+				<div class="time"><div class="bar"></div></div>
+				<div class="announcement">TEST</div>
+			</div>
+			<div class="screen" id="settings">
+				<h1 class="logo"><span>Dungeon</span> Treasure Hunt</h1>
+				<p>Settings go here</p>
+			</div>
+			<div id="grid-proto" class="grid-size"></div>
+			<div class="screen" id="about">
+				<h1 class="logo"><span>Dungeon</span> Treasure Hunt</h1>
+				<p>1. Blow things up</p>
+				<p>2. Get treasure</p>
+				<p>3. ???</p>
+				<p>4. Profit</p>
+				<p>Make sure to make it to the exit before the time runs out!</p>
+				<p>Use Arrow Keys to move, Space/Enter to plant dynamite.</p>
+				<p>Click anywhere to go back.</p>
+			</div>
+			<div id="grid-proto" class="grid-size"></div>
+		</div>
+	</body>
+</html>

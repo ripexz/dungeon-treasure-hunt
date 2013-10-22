@@ -1,0 +1,270 @@
+/*=========== CORE CSS =============*/
+::selection {
+	background: transparent;
+}
+body {
+	margin: 0;
+}
+#game {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgb(200,200,200);
+	font-family: "Orbitron", Arial, sans-serif;
+	color: rgb(200,200,200);
+	font-size: 40px;
+	width: 18em;
+	height: 18em;
+}
+#game p {
+	font-size: 0.7em;
+}
+#game .background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+#game .background canvas {
+	width: 100%;
+	height: 100%;
+}
+#game .dimmed {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background: rgba(0,0,0,0.7);
+	display: none;
+}
+#game .dimmed.active {
+	display: block;
+}
+#game .screen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 10;
+}
+#game .screen.active {
+	display: block;
+}
+#splash-screen {
+	text-align: center;
+	padding-top: 1em;
+}
+#splash-screen .continue {
+	cursor: pointer;
+	font-size: 0.6em;
+	display: none;
+	margin-top: 1em;
+}
+.logo {
+	font-family: "Press Start 2P", cursive;
+	font-size: 1.1em;
+	line-height: 1em;
+	margin: 0;
+	text-align: center;
+	color: rgb(250,200,0);
+	text-shadow: 0.03em 0.03em 0.03em rgb(200,0,0),
+				-0.03em -0.03em 0.03em rgb(200,0,0),
+				0.1em 0.15em 0.15em rgb(0,0,0);
+}
+
+.logo span {
+	display: block;
+	font-size: 0.5em;
+}
+
+.no-textshadow .logo {
+	filter: dropshadow(color=#000000,offX=3,offY=3);
+}
+/*============= PROGRESS BAR =============*/
+.progress {
+	margin: 3em auto 0 auto;
+	width: 6em;
+	height: 0.5em;
+	overflow: hidden;
+	border: 1px solid rgb(200,0,0);
+}
+.progress .indicator {
+	background-color: rgb(250,200,0);
+	height: 100%;
+	width: 0%;
+}
+/*============= MAIN MENU =============*/
+#main-menu {
+	padding-top: 1em;
+}
+ul.menu {
+	text-align: center;
+	padding: 2em 0 0 0;
+	margin: 0;
+	list-style-type: none;
+}
+ul.menu li {
+	margin: 0.5em 0;
+}
+ul.menu li button {
+	cursor: pointer;
+	font-family: "Press Start 2P", cursive;
+	font-size: 0.5em;
+	color: rgb(200,200,200);
+	width: 10em;
+	height: 1.5em;
+	background: rgb(40,40,40);
+	border: 0.1em solid rgb(150,150,150);
+	border-radius: 0.5em;
+	-webkit-box-shadow: 0.2em 0.2em 0.3em rgb(0,0,0);
+	-moz-box-shadow: 0.2em 0.2em 0.3em rgb(0,0,0);
+	box-shadow: 0.2em 0.2em 0.3em rgb(0,0,0);
+}
+ul.menu li button:hover {
+	background: rgb(60,60,60);
+}
+ul.menu li button:active {
+	background: rgb(200,200,200);
+	color: rgb(40,40,40);
+}
+/*============= GRID PROTOTYPE =============*/
+.grid-size {
+	font-size: 40px;
+}
+#grid-proto {
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	left: -1000px;
+}
+/*============= GAME BOARD =============*/
+#game-screen .game-board {
+	position: relative;
+	margin: 1.5em 1em 0.5em 1em;
+	width: 16em;
+	height: 16em;
+	-webkit-perspective: 16em;
+}
+
+#game-screen .game-board .board-bg, #game-screen .game-board .board {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#game-screen .game-board .board {
+	z-index: 10;
+}
+#game-screen .game-board .board-bg {
+	z-index: 0;
+}
+/*============= ABOUT =============*/
+#about {
+	padding-top: 1em;
+	text-align: center;
+}
+/*============= SETTINGS =============*/
+#settings {
+	padding-top: 1em;
+	text-align: center;
+}
+/*============= GAME OVER =============*/
+#game-over {
+	padding-top: 1em;
+	text-align: center;
+}
+/*============= SCORE & TIME =============*/
+#game-screen .score {
+	position: absolute;
+	width: 50%;
+	left: 1em;
+	top: 0;
+}
+#game-screen .time {
+	margin-top: 0.5em;
+	position: absolute;
+	width: 25%;
+	right: 1em;
+	top: 0;
+	height: 0.5em;
+	border: 1px solid rgb(200,0,0);
+	overflow: hidden;
+}
+#game-screen .time .bar {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(250,200,0)
+}
+/*============= ANNOUNCEMENT =============*/
+#game-screen .announcement {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -0.5em;
+	width: 100%;
+
+	font-family : "Press Start 2P", sans-serif;
+	color: rgb(250,200,0);
+	text-shadow: 0.03em 0.03em 0.03em rgb(200,0,0),
+				-0.03em -0.03em 0.03em rgb(200,0,0),
+				 0.1em 0.15em 0.15em rgb(0,0,0);
+	text-align: center;
+	white-space: nowrap;
+
+	z-index: 20; /* in front of everything else */
+	opacity: 0; /* start out transparent */
+	cursor: default;
+}
+
+.no-textshadow  #game-screen .announcement {
+	filter: glow(color=#ffff00,strength=1),
+			dropshadow(color=#000000,offX=3,offY=3);
+}
+
+/* Keyframes for webkit */
+@-webkit-keyframes zoomfade {
+	0% {
+		opacity : 1;
+		-webkit-transform : scale(0.5);
+	}
+	25% { /* stay at full opacity for a bit */
+		opacity : 1;
+	}
+	100% { /* and then fade to 0 */
+		opacity : 0;
+		-webkit-transform : scale(1.5);
+	}
+}
+/* Keyframes for webkit */
+@-moz-keyframes zoomfade {
+	0% {
+		opacity : 1;
+		-moz-transform : scale(0.5);
+	}
+	25% { /* stay at full opacity for a bit */
+		opacity : 1;
+	}
+	100% { /* and then fade to 0 */
+		opacity : 0;
+		-moz-transform : scale(1.5);
+	}
+}
+/* zoom-fade animation class */
+.zoomfade {
+	-webkit-animation-name : zoomfade;
+	-webkit-animation-duration : 2s;
+	-moz-animation-name : zoomfade;
+	-moz-animation-duration : 2s;
+}
+
+/* Fallback for browsers without CSS animations */
+.no-cssanimations #game-screen .announcement {
+	display : none;
+}
+.no-cssanimations #game-screen .announcement.active {
+	opacity : 1;
+	display : block;
+}
