@@ -71,6 +71,7 @@ hunt.board = (function() {
 				player.fireSize += 1;
 				break;
 			case "bombUp":
+				player.bombCountMax += 1;
 				player.bombCount += 1;
 				break;
 			case "treasure1":

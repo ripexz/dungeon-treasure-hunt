@@ -20,7 +20,8 @@ hunt.screens["game-screen"] = (function(){
 		};
 		
 		player.alive = true;
-		player.bombCount = 1;
+		player.bombCountMax = 1;
+		player.bombCount = player.bombCountMax;
 		player.fireSize = 1;
 
 		board.initialise(function(){
@@ -34,9 +35,10 @@ hunt.screens["game-screen"] = (function(){
 	}
 
 	function advanceLevel() {
-		gameState.level++;	
+		gameState.level++;
 		audio.play("levelup");
 		board.initialise(function(){
+			player.bombCount = player.bombCountMax;
 			display.initialise(function(){
 				display.redraw(board.getBoard(), function(){
 					announce("Level " + gameState.level);
