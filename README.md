@@ -8,5 +8,4 @@ Original version from the gamejam can be played here: http://www.ripexz.com/game
 
 Known Bugs:
 ---------------------
-- Planting a bomb and moving to next level before it explodes will permanently reduce bomb count by 1.
 - Bombs don't trigger other bombs to explode.
